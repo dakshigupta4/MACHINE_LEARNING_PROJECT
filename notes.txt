@@ -1,1 +1,20 @@
-setup.py means building a application as a package
+1. src->__init__.py is needed to use folders as packages and helps organize big Python projects in a clean way.
+setup.py code explanation and its an objective to ensure that program is installed correctly.
+2. setup.py means building a application as a package
+3. What does the code do?
+3. ans->It collects all the information and requirements needed for your Python project in one place, so others can install and use your project just like any other library.
+4. Imports:
+4. ans->Brings in functions to help package the code (setuptools is the library used for packing and installing)
+5. Use -e . during development for quick changes and testing—no need to reinstall your project every time you update your code.
+Makes working on your own code faster and easier!
+6. A .gitignore file helps Git ignore files you don’t want to share, making your project neat and secure.
+7. A component is a small part or piece of a bigger project that does one specific job. It helps organize the project by dividing it into smaller, manageable parts. Each component works independently or with other components to build the full system.
+8. Data ingestion is the component that collects and loads data from many different sources (like databases, files, websites) into one place, so other components can use that data easily.
+9. Data transformation is the process of cleaning and changing data into a format that’s easy to read, understand, and use for making decisions.converting categories to numbers is common and done using techniques like label encoding or one-hot encoding depending on the data and use case.
+10. A file named model_trainer.py is commonly used in machine learning projects as a script or module that handles the training of a machine learning model.
+11. A pipeline in machine learning is a step-by-step process that automates the flow of data through different stages to build, train, and deploy a model.
+12. train_pipeline builds the model; predict_pipeline uses the model to predict.
+13. A logger.py file in a Python project is usually a dedicated module to set up and manage logging throughout the application.
+14. utils.py	Store reusable helper/helper functions	Avoid repeating code, keep clean project
+15. exception.py	Define custom error classes	Clear error handling and debugging.
+16. sys is used when you want your Python program to work closely with the computer or the Python environment itself in a simple, direct way.
