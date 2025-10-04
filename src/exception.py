@@ -1,4 +1,7 @@
 import sys
+from .logger import logging
+import os 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tab=error_detail.exc_info()
     file_name=exc_tab.tb_frame.f_code.co_filename
@@ -10,10 +13,12 @@ class CustomException(Exception):
         self.error_message=error_message_detail(error_message,error_detail=error_detail)
     def __str__(self):
         return self.error_message
-# if __name__=="__main__":
-#     try:
-#         a=1/0
-#     except Exception as e:
-#         obj=CustomException(e,sys)
-#         print(obj)
+if __name__=="__main__":
+    try:
+        a=1/0
+    except Exception as e:
+        logging.info("Divide by zero error")
+        raise CustomException(e,sys)
+        # obj=CustomException(e,sys)
+        # print(obj)
 # This code makes error messages more readable and detailed, instead of just saying "Error: division by zero", it tells you exactly where and why the error occurred.
