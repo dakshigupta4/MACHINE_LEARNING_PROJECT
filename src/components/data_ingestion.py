@@ -24,7 +24,8 @@ from dataclasses import dataclass
 # Assuming these are your custom modules
 from src.exception import CustomException
 from src.logger import logging
-
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 
 # -----------------------------
 # Data Ingestion Config Class
@@ -81,3 +82,6 @@ if __name__ == "__main__":
     train_path, test_path = obj.initiate_data_ingestion()
     print(f"Train Data Path: {train_path}")
     print(f"Test Data Path: {test_path}")
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(train_path, test_path)
+
